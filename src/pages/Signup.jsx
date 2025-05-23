@@ -15,8 +15,6 @@ const Signup = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        console.log("Form Data:", data);
-        // handle form submission logic here (e.g., API call)
         const name = data?.fullName;
         const phone = data?.phone;
         const email = data?.email;
@@ -26,26 +24,24 @@ const Signup = () => {
 
         signUpUser(email, password)
             .then(res => {
-                console.log(res);
                 updateUserProfile({ displayName: name })
                     .then(res => {
                         toast.success("Registered successfully!")
-                         navigate("/account")
+                        navigate("/account")
                     })
                     .catch(err => {
                         toast.error("Something went wrong! Try again.")
                     })
             })
             .catch(err => {
-                console.log(err);
-                 toast.error("Something went wrong! Try again.")
+                toast.error("Something went wrong! Try again.")
             })
 
     };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-slate-100 min-h-screen my-6 border p-8 shadow-md w-full max-w-md">
+            <div className="bg-slate-100 min-h-screen my-6 border p-6 shadow-md w-full max-w-sm">
                 <h2 className="text-2xl font-bold mb-6 text-black">
                     Create your<br /> <span className="text-black">PopX account</span>
                 </h2>

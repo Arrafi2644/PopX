@@ -5,10 +5,9 @@ import { AuthContext } from '../context/AuthProvider';
 
 const Account = () => {
     const {user} = useContext(AuthContext)
-    console.log(user);
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-slate-100 min-h-screen border shadow-md w-full max-w-md my-6">
+            <div className="bg-slate-100 min-h-screen border shadow-md w-full max-w-sm my-6">
                 <h3 className='text-xl font-medium p-6 bg-white'>Account Setting</h3>
                 <div className=' '>
                     <div className='flex gap-4 p-6'>

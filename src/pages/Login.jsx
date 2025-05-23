@@ -5,8 +5,8 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    const {loginUser} = useContext(AuthContext)
-    const navigate= useNavigate()
+    const { loginUser } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const {
         register,
@@ -21,18 +21,18 @@ const Login = () => {
         const password = data?.password;
 
         loginUser(email, password)
-        .then(res => {
-            toast.success("Login successful!")
-             navigate("/account")
-        })
-        .catch(err => {
-            toast.error("Something went wrong! Please try again.")
-        })
+            .then(res => {
+                toast.success("Login successful!")
+                navigate("/account")
+            })
+            .catch(err => {
+                toast.error("Something went wrong! Please try again.")
+            })
     };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-slate-100 min-h-screen border p-8 shadow-md w-full max-w-md my-6">
+            <div className="bg-slate-100 min-h-screen border p-6 shadow-md w-full max-w-sm my-6">
                 <h2 className="text-2xl font-bold  text-black">
                     Signin to your<br /> <span className="text-black">PopX account</span>
                 </h2>
