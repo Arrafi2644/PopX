@@ -1,12 +1,40 @@
-# React + Vite
+# PopX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application built with React and Vite, featuring a responsive landing page, user signup, login, and account management. PopX integrates Firebase for authentication and uses TailwindCSS for styling, delivering a sleek and fast user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Link: https://popx-978d1.web.app
 
-## Expanding the ESLint configuration
+## 🧾 Table of Contents
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+
+---
+
+## ✨ Features
+
+- ⚡ Fast development with Vite
+- 🎨 Styled using TailwindCSS and DaisyUI
+- 🔥 Firebase authentication (Signup/Login/Account)
+- 🏠 Landing page
+- 🔐 User signup & login flows
+- 👤 Account page with authentication state
+- 🌐 Client-side routing via React Router
+- 📑 Form management with React Hook Form
+- 🔍 Search filtering with Match Sorter
+- 📢 Toast notifications via React Hot Toast
+
+---
+
+## 🧰 Tech Stack
+
+- **Framework:** React 19
+- **Bundler:** Vite
+- **Styling:** TailwindCSS, DaisyUI
+- **Authentication:** Firebase
+- **Routing:** React Router DOM
+- **Form Handling:** React Hook Form
+
+
