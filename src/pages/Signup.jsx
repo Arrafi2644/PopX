@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../context/AuthProvider";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+    const { signUpUser, updateUserProfile } = useContext(AuthContext)
+    const navigate = useNavigate()
+
     const {
         register,
         handleSubmit,
@@ -11,6 +17,30 @@ const Signup = () => {
     const onSubmit = (data) => {
         console.log("Form Data:", data);
         // handle form submission logic here (e.g., API call)
+        const name = data?.fullName;
+        const phone = data?.phone;
+        const email = data?.email;
+        const company = data?.company;
+        const password = data?.password;
+        const isAgency = data?.agency;
+
+        signUpUser(email, password)
+            .then(res => {
+                console.log(res);
+                updateUserProfile({ displayName: name })
+                    .then(res => {
+                        toast.success("Registered successfully!")
+                         navigate("/account")
+                    })
+                    .catch(err => {
+                        toast.error("Something went wrong! Try again.")
+                    })
+            })
+            .catch(err => {
+                console.log(err);
+                 toast.error("Something went wrong! Try again.")
+            })
+
     };
 
     return (
@@ -68,7 +98,12 @@ const Signup = () => {
                             <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-slate-100 text-sm font-medium text-purple-700 mb-1">Password *</label>
                             <input
                                 type="password"
-                                {...register("password", { required: "Password is required" })}
+                                {...register("password", {
+                                    required: "Password is required", minLength: {
+                                        value: 6,
+                                        message: "Password must be at least 6 characters long"
+                                    }
+                                })}
                                 placeholder="Enter password"
                                 className="input input-bordered w-full bg-slate-100"
                             />

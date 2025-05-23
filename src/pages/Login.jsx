@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../context/AuthProvider";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const {loginUser} = useContext(AuthContext)
+    const navigate= useNavigate()
+
     const {
         register,
         handleSubmit,
@@ -11,6 +17,17 @@ const Login = () => {
     const onSubmit = (data) => {
         console.log("Form Data:", data);
         // handle form submission logic here (e.g., API call)
+        const email = data?.email;
+        const password = data?.password;
+
+        loginUser(email, password)
+        .then(res => {
+            toast.success("Login successful!")
+             navigate("/account")
+        })
+        .catch(err => {
+            toast.error("Something went wrong! Please try again.")
+        })
     };
 
     return (
