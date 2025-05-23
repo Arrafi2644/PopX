@@ -23,7 +23,7 @@ const Account = () => {
                         </div>
 
                     </div>
-                    <p className='p-6'>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam</p>
+                    <p className='p-6'>Manage your account details, update your email address, and change your password here. Ensure your information is up to date for a seamless experience.</p>
 
                     <div className='min-h-[300px] h-full border-2 border-l-0 border-gray-400 border-r-0 border-dashed mb-8'>
 
