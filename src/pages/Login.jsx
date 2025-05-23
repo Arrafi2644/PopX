@@ -36,7 +36,7 @@ const Login = () => {
                 <h2 className="text-2xl font-bold  text-black">
                     Signin to your<br /> <span className="text-black">PopX account</span>
                 </h2>
-                <p className="mb-6"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, modi. </p>
+                <p className="mb-6">Access your personalized PopX <br /> dashboard with secure sign-in.</p>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     {/* Email Address */}
