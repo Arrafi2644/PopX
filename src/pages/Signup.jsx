@@ -15,7 +15,7 @@ const Signup = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <div className="bg-slate-100 min-h-screen my-6 border p-8 shadow-md w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-black">
                     Create your<br /> <span className="text-black">PopX account</span>
                 </h2>
@@ -25,11 +25,11 @@ const Signup = () => {
                     {/* Full Name */}
                     <div>
                         <div className="relative">
-                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-white text-sm font-medium text-purple-700 mb-1">Full Name *</label>
+                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-slate-100 text-sm font-medium text-purple-700 mb-1">Full Name *</label>
                             <input
                                 {...register("fullName", { required: "Full name is required" })}
                                 placeholder="Enter full name"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full bg-slate-100"
                             />
                         </div>
                         {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>}
@@ -38,11 +38,11 @@ const Signup = () => {
                     {/* Phone Number */}
                     <div>
                         <div className="relative">
-                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-white text-sm font-medium text-purple-700 mb-1">Phone number *</label>
+                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-slate-100 text-sm font-medium text-purple-700 mb-1">Phone number *</label>
                             <input
                                 {...register("phone", { required: "Phone number is required" })}
                                 placeholder="Enter phone number"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full bg-slate-100"
                             />
                         </div>
                         {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
@@ -51,12 +51,12 @@ const Signup = () => {
                     {/* Email Address */}
                     <div>
                         <div className="relative">
-                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-white text-sm font-medium text-purple-700 mb-1">Email address *</label>
+                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-slate-100 text-sm font-medium text-purple-700 mb-1">Email address *</label>
                             <input
                                 type="email"
                                 {...register("email", { required: "Email is required" })}
                                 placeholder="Enter email address"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full bg-slate-100"
                             />
                         </div>
                         {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
@@ -65,12 +65,12 @@ const Signup = () => {
                     {/* Password */}
                     <div>
                         <div className="relative">
-                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-white text-sm font-medium text-purple-700 mb-1">Password *</label>
+                            <label className="block px-1 w-32 absolute -top-3 left-2 z-10 bg-slate-100 text-sm font-medium text-purple-700 mb-1">Password *</label>
                             <input
                                 type="password"
                                 {...register("password", { required: "Password is required" })}
                                 placeholder="Enter password"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full bg-slate-100"
                             />
                         </div>
                         {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
@@ -79,11 +79,11 @@ const Signup = () => {
                     {/* Company Name */}
                     <div>
                         <div className="relative">
-                            <label className="block px-1 w-28 absolute -top-3 z-10 outline-hidden left-2 bg-white text-sm font-medium text-purple-700 mb-1">Company name</label>
+                            <label className="block px-1 w-28 absolute -top-3 z-10 outline-hidden left-2 bg-slate-100 text-sm font-medium text-purple-700 mb-1">Company name</label>
                             <input
                                 {...register("company")}
                                 placeholder="Enter company name"
-                                className=" input input-bordered w-full"
+                                className=" input input-bordered w-full bg-slate-100"
                             />
                         </div>
                         {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>}
